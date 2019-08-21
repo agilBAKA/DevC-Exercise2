@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <input type="number" id="first" placeholder="masukan nilai pertama" value="2">
+    <span>+</span>
+    <input type="number" id="second" placeholder="masukan nilai kedua" value="4">
+    <span>=</span>
+    <span id="nilaiJumlah">?</span>
+    <br>
+    <br>
+    <div class="info">
+        <span id="result">klik hitung, lalu lihat hasil test!</span>
+    </div>
+    <br>
+    <hr>
+    <button onclick="getResult()">hitung</button>
+    <script type="text/javascript">
+        var first = document.getElementById('first');
+        var second = document.getElementById('second');
+        
+        first.onkeydown = function(){
+            console.log('hello' + first)
+        }
+
+        var getJumlah = first.value + second.value
+        console.log(getJumlah)
+        
+
+        var valueFirst = parseInt(first.value);
+        var valueSecond = parseInt(second.value);
+        
+        var getValueJumlah = valueFirst + valueSecond
+        console.log(getValueJumlah)
+        var result = document.getElementById('result')
+
+        function getResult(){
+
+            document.getElementById('nilaiJumlah').textContent = getValueJumlah
+
+            if( getValueJumlah > 1 ) {
+                console.log('Yes! kamu lolos seleksi')
+                result.innerText = 'Yes! kamu lolos seleksi'
+
+            } else {
+                console.log('yaaaah, coba lagi yaaaa')
+                result.innerText = 'yaaaah, coba lagi yaaaa'
+            }
+
+        }
+
+    </script>
+</body>
+</html>

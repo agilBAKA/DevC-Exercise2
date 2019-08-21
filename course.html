@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    // materi 1 conditional
+
+    console.log(5 > 3)
+    console.log(5 < 2)
+    console.log(5 == 5)
+
+    // 
+
+    console.log("5" === 5)
+    console.log("5" === 5)
+
+
+    // condotional true
+    if( 5 > 3 ) {
+        console.log('bener')
+    }
+    console.log('lanjut aja~')
+    
+    // condotional false
+    if( 5 < 3 ) {
+        console.log('jalan ga yaaa?')
+    }
+    console.log('eeit lanjut lagiii~')
+    
+
+    // IF ELSE
+    var myHeight = 172;
+
+    if (myHeight > 160) {
+        console.log(" hore, saya bisa naik roller coaster! ");
+    } else {
+        console.log(" yasudah, saya naik komedi putar saja deh. ");
+    }
+
+    console.log(" Sudah sore. Pulang yuk! ");
+
+    // logical operator
+    var ownKTP = false;
+    var ownSIM = true;
+
+    if(ownKTP) {
+        console.log('saya beli tiket')
+    } else {
+        console.log('yah harus punya ktp atau sim, baru bisa beli tiket')
+        if(ownSIM) {
+            console.log('nah, punya SIM ternyata, bisa deh beli tiket!')
+        }
+    }
+
+    if ( ownKTP || ownSIM ) {
+        console.log(" saya bisa beli tiket karena antara punya SIM atau KTP");
+    } else {
+        console.log('yah harus punya ktp atau sim, baru bisa beli tiket')
+    }
+    
+
+    if ( ownKTP && ownSIM ) {
+        console.log(" saya bisa beli tiket karena antara punya SIM atau KTP");
+    } else {
+        console.log('yah harus punya ktp dan sim, baru bisa beli tiket')
+    }
+
+
+
+    // looping - while
+    var flag = 1;
+    while(flag < 10) {
+        console.log('Iterasi ke-' + flag); 
+    flag++;
+    }
+
+    // looping - while 
+
+    var deret = 5;
+    var jumlah = 0;
+    
+    while(deret > 0) {
+        jumlah += deret; // mean jumlah = jumlah + deret
+        /*  
+        iterasi 1
+        jumlah = 0 + 5
+        jumlah = 5
+        deret = 4
+        */
+        
+        /*  
+        iterasi 2
+        jumlah = 4 + 5
+        jumlah = 9
+        deret = 3
+        */
+        
+        /*  
+        iterasi 3
+        jumlah = 9 + 3
+        jumlah = 12
+        deret = 2
+        */
+        
+        /*  
+        iterasi 4
+        jumlah = 12 + 2
+        jumlah = 14
+        deret = 1
+        */
+        
+        /*  
+        iterasi 5
+        jumlah = 14 + 1
+        jumlah = 15
+        deret = 0
+        */
+
+        deret--;
+        console.log('Jumlah saat ini: ' + jumlah)
+    }
+
+    console.log(jumlah);
+
+    // for loop
+    for(var angka = 1; angka < 10; angka++) {
+        console.log('Iterasi ke-' + angka);
+    }
+
+    var jumlah = 0;
+    for(var deret = 5; deret > 0; deret--) {
+        jumlah += deret;
+        console.log('Jumlah saat ini: ' + jumlah);
+    }
+
+    console.log(jumlah);
+
+    for(var deret = 0; deret < 10; deret += 2) {
+        console.log('Iterasi dengan Increment counter 2: ' + deret);
+    }
+
+    console.log('-------------------------------');
+
+    for(var deret = 15; deret > 0; deret -= 3) {
+        console.log('Iterasi dengan Decrement counter : ' + deret);
+    } 
+
+    // 
+    var angkaPi    = Math.PI
+    var pangkatDua = Math.pow(4,2)
+    var angkaAcak  = Math.random()
+    var setAngkaAcak  = Math.floor(Math.random() * 101)
+
+    console.log(angkaPi, pangkatDua, angkaAcak, setAngkaAcak)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div>
+        <h1>My Simple Calculator</h1>
+            <input type="text" id="fisrt" value="" required />
+            <input type="number" id="second" value="" required />
+            =
+            <span id="total">?</span>
+            <br><br>
+            <span id="result">klik hitung, lalu lihat hasil test!</span>
+            <br>
+            <br>
+        </div>
+        <button type="submit" id="getTotal">hitung ah!</button>
+    <script>
+        var fisrt = document.getElementById('fisrt');
+        var second = document.getElementById('second');
+        var result = document.getElementById('result')
+        var calculateButtonSum = document.getElementById('getTotal');
+
+        calculateButtonSum.onclick = function() {
+            var total = parseInt(fisrt.value) + parseInt(second.value);
+            document.getElementById('total').innerHTML = total;
+            var minimum = 8;
+
+            if( total > minimum ) {
+                console.log('Yes! kamu lolos seleksi')
+                result.innerText = 'Yes! kamu lolos seleksi'
+            } else {
+                console.log('yaaaah, coba lagi yaaaa')
+                result.innerText = 'yaaaah, coba lagi yaaaa, minimal nilainya' + minimum
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
